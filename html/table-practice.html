@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <title>Henry's Rabbits</title>
 </head>
 <body>
   <h1>Henry's rabbits</h1>
-  <table border=1>
+  <table border="1">
+    <caption>Some facts about my rabbits</caption>
     <tr>
       <th>Name</th>
       <th>Age (years)</th>
@@ -35,13 +36,49 @@
       <td>Dill</td>
     </tr>
     <tr>
-      <td>Fettucinni</td>
+      <td>Fettucini</td>
       <td>2</td>
       <td>M</td>
       <td>Palomino</td>
       <td>Grapes</td>
     </tr>
-    <caption>Some facts about my rabbits</caption>
+  </table>
+  <br>
+  <table  border="1">
+    <caption>Rabbit Feeding schedule</caption>
+    <tr>
+      <th>Rabbit</th>
+      <th>Morning</th>
+      <th>Afternoon</th>
+      <th>Night</th>
+    </tr>
+    <tr>
+      <td>Elkin</td>
+      <td>Hay</td>
+      <td>Lettuce</td>
+      <td>Banana</td>
+    </tr>
+    <tr>
+      <td rowspan="2">Queen Mary</td>
+      <td>Hay</td>
+      <td>Lettuce (MWFSu)</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>Hay</td>
+      <td>&nbsp;</td>
+      <td>Carrots (TThSa)</td>
+    </tr>
+    <tr>
+      <td>Jessica</td>
+      <td>Dill</td>
+<!--Validation told me that align="center" is obsolete-->
+      <td colspan="2" style="text-align:center">Lots of Hay</td>
+    </tr>
+    <tr>
+      <td>Fettucini</td>
+      <td colspan="3" style="text-align:center">Hay Whenever He Wants</td>
+    </tr>
   </table>
 </body>
 </html>
