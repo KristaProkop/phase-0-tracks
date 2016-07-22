@@ -1,0 +1,217 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"h",
+				"header	Tag"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 187.0,
+		"last_filter": "html",
+		"selected_items":
+		[
+			[
+				"html",
+				"Snippet: html"
+			],
+			[
+				"htm",
+				"Snippet: html"
+			],
+			[
+				"install pac",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 418.0
+	},
+	"console":
+	{
+		"height": 139.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/kristaprokopczyk/Dropbox/DBC/Phase0/Week 2/KristaProkop.github.io/index.html",
+		"/Users/kristaprokopczyk/Dropbox/DBC/Phase0/Week 2/KristaProkop.github.io/survey.html",
+		"/Users/kristaprokopczyk/Dropbox/DBC/Phase0/Week 2/KristaProkop.github.io/formsubmission.html",
+		"/Users/kristaprokopczyk/Documents/devbootcamp/phase-0-tracks/html/forms/practice-form.html",
+		"/Users/kristaprokopczyk/Documents/devbootcamp/phase-0-tracks/html/forms/success.html",
+		"/Users/kristaprokopczyk/Documents/devbootcamp/phase-0-tracks/html/table-practice.html",
+		"/Users/kristaprokopczyk/Documents/devbootcamp/phase-0-tracks/html/forms/example-form.html",
+		"/Users/kristaprokopczyk/Downloads/octopus 2/octopus.md",
+		"/Users/kristaprokopczyk/Downloads/octopus/octopus.md",
+		"/Users/kristaprokopczyk/Documents/devbootcamp/phase-0-tracks/version-control/git-definitions.md",
+		"/Users/kristaprokopczyk/Documents/devbootcamp/phase-0-tracks/html/web_basics/index.html",
+		"/Users/kristaprokopczyk/Documents/devbootcamp/phase-0-gps-1/.git/COMMIT_EDITMSG",
+		"/Users/kristaprokopczyk/Documents/devbootcamp/phase-0-gps-1/awesome_page.md",
+		"/Users/kristaprokopczyk/Documents/devbootcamp/phase-0-tracks/.git/COMMIT_EDITMSG",
+		"/Users/kristaprokopczyk/Documents/devbootcamp/phase-0-gps-1/readme.md",
+		"/Users/kristaprokopczyk/Dropbox/DBC/Phase0/Week 2/Week 2 cultural discussion",
+		"/Users/kristaprokopczyk/Documents/practicerepo/practice-git/my_code.txt",
+		"/Users/kristaprokopczyk/Documents/practicerepo/practice-git/.git/COMMIT_EDITMSG",
+		"/Users/kristaprokopczyk/Dropbox/DBC/Phase0/Week 1/Review & Reflect",
+		"/Users/kristaprokopczyk/Documents/devbootcamp/phase-0-tracks/git-definitions.md",
+		"/Users/kristaprokopczyk/Documents/practicerepo/my_code.txt",
+		"/Users/kristaprokopczyk/Dropbox/DBC/Phase0/Week 1/hobby.md",
+		"/Users/kristaprokopczyk/Dropbox/DBC/Phase0/Week 1/Octopus git.txt",
+		"/Users/kristaprokopczyk/Dropbox/DBC/Phase0/Week 1/octopus history.txt",
+		"/Users/kristaprokopczyk/Documents/octopus/.git/COMMIT_EDITMSG",
+		"/Users/kristaprokopczyk/Documents/octopus/octopus.md",
+		"/Users/kristaprokopczyk/Dropbox/DBC/Phase0/Week 1/Zoo Git.txt",
+		"/Users/kristaprokopczyk/Dropbox/DBC/Phase0/Week 1/Accountability group",
+		"/Users/kristaprokopczyk/Dropbox/DBC/Phase0/Week 1/Cultural impressions",
+		"/Users/kristaprokopczyk/Desktop/markdown.md",
+		"/Users/kristaprokopczyk/Desktop/markdown",
+		"/Users/kristaprokopczyk/Dropbox/DBC/Week 2/Review & Reflect",
+		"/Users/kristaprokopczyk/Dropbox/DBC/Phase0/1.2.1/hobby.md",
+		"/Users/kristaprokopczyk/Dropbox/FileDBC",
+		"/Users/kristaprokopczyk/Desktop/practice/coding/new-solution.md"
+	],
+	"find":
+	{
+		"height": 25.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"Table"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 25.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "table-practice.sublime-project",
+	"replace":
+	{
+		"height": 46.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
