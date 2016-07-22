@@ -1,38 +1,37 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Do you like this webpage?</title>
+	<title>Home page</title>
 </head>
 <body>
-<form name="Submit" action="success.html" method="post">
-  <fieldset>
+	<form name="Pet Selector" action="success.html" method="post">
+		<fieldset>
+	    <div>
+	      <label>Name:</label>
+	      <input type="text" name="name">
+	    </div>
+
+	    <div>
+	      <label>Email Address:</label>
+	      <input type="email" name="email">
+	    </div>
+	    </fieldset>
     <div>
-      <label>Your name:</label>
-      <input type="text" name="fullname">
-    </div>
-    <div>
-      <label>Email:</label>
-      <input type="email" name="email">
-    </div>
-    <div>
-      <label>Date:</label>
-      <input type="date" name="date">
-    </div>
-  </fieldset>
-  <fieldset>
-  <div>
-      <label>Rate this website:</label>
-      <select name="rating">
-        <option value="rate">1</option>
-        <option value="rate">2</option>
-        <option value="rate">3</option>
+      <label>What kind of pet are you looking for?</label>
+      <select name="Pet">
+        <option value="Cat">Cat</option>
+        <option value="Dog">Dog</option>
+        <option value="Guinea Pig">Guinea Pig</option>
+        <option value="Giraffe">Giraffe</option>
       </select>
     </div>
-    <div>
-      <textarea name="comments" rows="10" cols="50">Write your comments</textarea>
-    </div>
-    </fieldset>
- <button type="Submit">Rate the site!</button> 
-</form>
+	<div>
+		<textarea name="Explain" rows="5" cols="100">What makes you a good pet parent?</textarea>
+	</div>
+
+	</form>
+
+<button type="Submit">Submit</button>
+
 </body>
 </html>
