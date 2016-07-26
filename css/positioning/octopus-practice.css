@@ -1,0 +1,23 @@
+
+#octopus {
+  position: fixed;
+  left: 50%;
+  margin-top: 70px;
+  margin-left: -100px;
+}
+
+#hat {
+position: fixed;
+left: 50%;
+margin-top 40px;
+margin-left: -120px;
+z-index: 1;
+}
+
+#glasses {
+position: fixed;
+left: 50%;
+margin-top: 170px;
+margin-left: -60px;
+z-index: 1;
+}
