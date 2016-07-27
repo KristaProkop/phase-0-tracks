@@ -1,31 +1,22 @@
-
-h1  {
-    font: 32px Helvetica;
-    text-align: center;
+.images  {
+    position: relative;
+    margin: auto;
+    left: 40%;
 }
 
 #octopus {
     position: absolute;
-    margin: auto;
-    left: 0;
-    right: 0;
-    top: 150px;
+    top: 75px;
 }
 
 #hat {
     position: absolute;
-    margin: auto;
-    left: 0; 
-    right: -30px;
-    z-index: 1;
+    left: -20px;
 }
 
 #glasses {
     position: absolute;
-    margin: auto;
-    left: 0; 
-    right: -12px;
-    top: 250px;
-    z-index: 1;
+    top: 175px;
+    left: 45px;
 }
 
