@@ -1,22 +1,24 @@
 .images  {
-    position: relative;
-    margin: auto;
-    left: 40%;
+    position: absolute;
+    left: 50%;
 }
 
 #octopus {
-    position: absolute;
+    position: relative;
     top: 75px;
+    left: -50%;
+    z-index: -1;
 }
 
 #hat {
     position: absolute;
-    left: -20px;
+    top: 0px;
+    left: -60%;
 }
 
 #glasses {
     position: absolute;
     top: 175px;
-    left: 45px;
+    left: -30%;
 }
 
