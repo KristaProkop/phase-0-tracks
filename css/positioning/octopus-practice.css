@@ -1,6 +1,18 @@
+
+h1 {
+    font-family: Helvetica;
+    font-weight: bold;
+    text-align: center;
+
+}
+h2  {
+    font-family: Helvetica;
+    text-align: center;
+}
 .images  {
     position: absolute;
     left: 50%;
+    border: 1px solid red;
 }
 
 #octopus {
@@ -8,17 +20,20 @@
     top: 75px;
     left: -50%;
     z-index: -1;
+    border: 1px dotted black;
 }
 
 #hat {
     position: absolute;
     top: 0px;
     left: -60%;
+    border: 1px dotted black;
 }
 
 #glasses {
     position: absolute;
     top: 175px;
     left: -30%;
+    border: 1px dotted black;
 }
 
