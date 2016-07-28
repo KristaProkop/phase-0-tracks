@@ -1,11 +1,11 @@
 html {
     background-color: #ADD8E6;
 }
+
 h1 {
     font-family: Helvetica;
     font-weight: bold;
     text-align: center;
-
 }
 
 h2  {
@@ -17,27 +17,23 @@ h2  {
 .images  {
     position: absolute;
     left: 50%;
-    border: 1px solid red;
 }
 
 #octopus {
     position: relative;
     top: 75px;
     left: -50%;
-    border: 1px dotted black;
 }
 
 #hat {
     position: absolute;
     top: 0px;
     left: -60%;
-    border: 1px dotted black;
 }
 
 #glasses {
     position: absolute;
     top: 175px;
     left: -30%;
-    border: 1px dotted black;
 }
 
