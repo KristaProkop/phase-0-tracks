@@ -4,12 +4,13 @@ html {
 
 h1 {
     font-family: Helvetica;
-    font-weight: bold;
+    font-weight: lighter;
     text-align: center;
 }
 
 h2  {
     font-family: Helvetica;
+    font-weight: lighter;
     font-size: 12pt;
     text-align: center;
 }
