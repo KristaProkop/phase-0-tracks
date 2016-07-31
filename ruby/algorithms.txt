@@ -47,7 +47,7 @@ aka brush_teeth
 15.  open mouth and insert toothbrush until touching teeth
 16.  push toothbrush left
 17.  push toothbrush right
-18.  repeat 14 & 15 for two minutes
+18.  repeat 16 & 17 for two minutes
 19.  remove toothbrush from mouth and position under faucet
 20.  turn on water for 5 seconds then turn off
 21.  shake excess water from toothbrush for 2 seconds
