@@ -1,0 +1,62 @@
+__An Elevator Usage Algorithm__
+aka find_destination_floor 
+
+(assuming destination_floor and current_floor = gets.chomp)
+
+1.  begin process
+    if destination_floor == current_floor
+        --> exit find_destination_floor process and begin find_destination_unit process
+2.  find elevator bank and proceed toward it
+3.  upon reaching elevator bank, stop
+4.  find elevator up/down buttons
+    if destination_floor > current_floor 
+        --> press up arrow button
+5.  if destination_floor < current_floor 
+        --> press down arrow button
+6.  wait for elevator doors to open
+7.  when elevator doors open, walk 3 steps into elevator
+8.  turn around 180 degrees, stop
+9.  find elevator number buttons 
+10. find number button == destination_floor and press it
+    if number button == destination_floor returns false
+        --> exit find_destination_floor process and begin call_for_correct_address process
+11. watch the floor indicator display
+12. when floor indicator display == destination_floor AND elevator doors open, take 3 steps out of elevator
+13. proceed to destination 
+14. end process
+
+
+__A Toothbrushing Algorithm__
+aka brush_teeth
+
+1.   begin process
+     if acidic foods have been consumed in past 30 minutes, wait until 30 minutes have passed [[brushing too quickly weakens enamel!]]
+2.   find toothbrush holder
+3.   retrieve toothbrush from toothbrush holder
+4.   turn on water and hold toothbrush head under running water
+5.   turn off water
+6.   pull out small drawer below the sink on the right side
+7.   retrieve aquafresh from drawer
+8.   flip open cap
+9.   bring toothbrush up to the same height as the toothpaste
+10.  squeeze toothpaste onto brush
+11.  when toothpaste squirt length == bristle width stop squeezing
+12.  replace toothpaste cap and place back in drawer
+13.  close drawer
+14.  bring toothbrush up to mouth 
+15.  open mouth and insert toothbrush until touching teeth
+16.  push toothbrush left
+17.  push toothbrush right
+18.  repeat 14 & 15 for two minutes
+19.  remove toothbrush from mouth and position under faucet
+20.  turn on water for 5 seconds then turn off
+21.  shake excess water from toothbrush for 2 seconds
+22.  replace toothbrush in holder
+23.  end process
+
+
+
+
+
+
+
