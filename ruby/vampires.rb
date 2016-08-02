@@ -27,7 +27,7 @@ enroll = gets.chomp
 until allergies == "done"
 	puts "If you have allergies, type one of them in and press enter. When you are finished type 'done'."
 	allergies = gets.chomp
-	if allergies == "sunlight"
+	if allergies == "sunshine"
 	break
 end
 end
