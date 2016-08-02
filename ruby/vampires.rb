@@ -1,53 +1,51 @@
-
-loops = 0
-allergies = ""
+employeesentered = 0   #set starting var for entries loop
 
 puts "How many employees do you have to enter today?"
-entries = gets.chomp
-entries = entries.to_i
+entries = gets.chomp.to_i
 
-until loops == entries
-puts "What is your name?"
-name = gets.chomp
+until employeesentered == entries  #employeesentered var increases by 1 until it matches the number of entries per user input
+	puts "What is your name?"
+	name = gets.chomp.downcase
+	
+	puts "how old are you?"
+	age = gets.chomp.to_i
 
-puts "how old are you?"
-age = gets.chomp
-age = age.to_i
+	puts "What year were you born?"
+	year = gets.chomp.to_i
 
-puts "What year were you born?"
-year = gets.chomp
-year = year.to_i
+	puts "Our company cafeteria serves garlic bread. Should we order some for you? y/n"
+	likesgarlic = gets.chomp.downcase
 
-puts "Our company cafeteria serves garlic bread. Should we order some for you? y/n"
-garlic = gets.chomp
+	puts "Would you like to enroll in the company’s health insurance? y/n"
+	wantsinsurance = gets.chomp.downcase
 
-puts "Would you like to enroll in the company’s health insurance? y/n"
-enroll = gets.chomp
+allergies = ""  #sets allergies var to avoid skipping this question after one entry answers "done"
+	until allergies == "done"
+		puts "Type in your allergies one by one. Type 'done' when finished."
+		allergies = gets.chomp.downcase
+		if allergies == "sunshine"
+			break #exits allergies question and moves on to condition test
+		else  #in this case the empty else restarts the loop
+		end
+	end
 
-until allergies == "done"
-	puts "If you have allergies, type one of them in and press enter. When you are finished type 'done'."
-	allergies = gets.chomp
-	if allergies == "sunshine"
-	break
-end
-end
+vampforsure = name == "drake cula" || name == "tu fang"  #i'll exclude this condition in the first case tests
+ageyearmatch = Time.new.year - age == year #calculates age accuracy and sets boolean for test
 
-agetrue = Time.new.year - age == year
-case 
-when (name =~ /Drake Cula/i) || (name =~ /Tu Fang/i) || (allergies =~ /sunlight/i)
-	puts "Definitely a vampire"
-when agetrue && (garlic == "y" || enroll == "y")
-	puts "Probably not a vampire"
-when (!agetrue && garlic == "n" && enroll == "n")
-	puts "Almost certainly a vampire"
-when !agetrue && (garlic == "n" || enroll == "n")
-	puts "Probably a vampire"
+	puts case
+	when allergies != "sunshine" && !vampforsure && ageyearmatch && (likesgarlic == "y" || wantsinsurance == "y")
+		 "Probably not a vampire"
+	when allergies == "sunshine" || !vampforsure && !ageyearmatch && (likesgarlic == "n" || wantsinsurance == "n")
+		 "Probably a vampire"
+	when !vampforsure && (!ageyearmatch && likesgarlic == "n" && wantsinsurance == "n")
+		 "Almost certainly a vampire"
+	when vampforsure
+		 "Definitely a vampire"
+	else
+		 "Results inconclusive"
+	end
 
-else
-	puts "Results inconclusive"
-end
-
-loops = loops + 1
+employeesentered = employeesentered + 1
 end
 
 puts "Actually, never mind! What do these questions have to do with anything? Let's all be friends." 
