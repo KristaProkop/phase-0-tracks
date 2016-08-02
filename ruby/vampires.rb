@@ -1,4 +1,12 @@
 
+loops = 0
+allergies = ""
+
+puts "How many employees do you have to enter today?"
+entries = gets.chomp
+entries = entries.to_i
+
+until loops == entries
 puts "What is your name?"
 name = gets.chomp
 
@@ -16,18 +24,32 @@ garlic = gets.chomp
 puts "Would you like to enroll in the company’s health insurance? y/n"
 enroll = gets.chomp
 
-agetrue = Time.new.year - age == year
+until allergies == "done"
+	puts "If you have allergies, type one of them in and press enter. When you are finished type 'done'."
+	allergies = gets.chomp
+	if allergies == "sunlight"
+	break
+end
+end
 
+agetrue = Time.new.year - age == year
 case 
+when (name =~ /Drake Cula/i) || (name =~ /Tu Fang/i) || (allergies =~ /sunlight/i)
+	puts "Definitely a vampire"
 when agetrue && (garlic == "y" || enroll == "y")
 	puts "Probably not a vampire"
 when (!agetrue && garlic == "n" && enroll == "n")
 	puts "Almost certainly a vampire"
 when !agetrue && (garlic == "n" || enroll == "n")
 	puts "Probably a vampire"
-when (name =~ /Drake Cula/i) || (name =~ /Tu Fang/i)
+
 else
 	puts "Results inconclusive"
 end
+
+loops = loops + 1
+end
+
+puts "Actually, never mind! What do these questions have to do with anything? Let's all be friends." 
 
 
