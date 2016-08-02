@@ -17,15 +17,13 @@ until employeesentered == entries  #employeesentered var increases by 1 until it
 	year = gets.chomp
 	year = year.to_i
 
-agetrue = Time.new.year - age == year #calculates age accuracy and sets boolean for test
-
 	puts "Our company cafeteria serves garlic bread. Should we order some for you? y/n"
-	garlic = gets.chomp
-	garlic = garlic.downcase
+	likesgarlic = gets.chomp
+	likesgarlic = likesgarlic.downcase
 
 	puts "Would you like to enroll in the company’s health insurance? y/n"
-	enroll = gets.chomp
-	enroll = enroll.downcase
+	wantsinsurance = gets.chomp
+	wantsinsurance = wantsinsurance.downcase
 
 allergies = ""  #sets allergies var to avoid skipping this question after one entry answers "done"
 	until allergies == "done"
@@ -38,15 +36,18 @@ allergies = ""  #sets allergies var to avoid skipping this question after one en
 		end
 	end
 
+vampforsure = name == "drake cula" || name == "tu fang" || allergies == "sunshine" #i'll exclude this condition in the first case tests
+ageyearmatch = Time.new.year - age == year #calculates age accuracy and sets boolean for test
+
 	puts case
-	when name == "drake cula" || name == "tu fang" || allergies == "sunshine"
-		 "Definitely a vampire"
-	when agetrue && (garlic == "y" || enroll == "y")
+	when !vampforsure && ageyearmatch && (likesgarlic == "y" || wantsinsurance == "y")
 		 "Probably not a vampire"
-	when (!agetrue && garlic == "n" && enroll == "n")
-		 "Almost certainly a vampire"
-	when !agetrue && (garlic == "n" || enroll == "n")
+	when !vampforsure && !ageyearmatch && (likesgarlic == "n" || wantsinsurance == "n")
 		 "Probably a vampire"
+	when !vampforsure && (!ageyearmatch && likesgarlic == "n" && wantsinsurance == "n")
+		 "Almost certainly a vampire"
+	when vampforsure
+		 "Definitely a vampire"
 	else
 		 "Results inconclusive"
 	end
