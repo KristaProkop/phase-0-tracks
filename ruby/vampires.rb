@@ -1,5 +1,4 @@
 
-
 puts "What is your name?"
 name = gets.chomp
 
@@ -17,18 +16,16 @@ garlic = gets.chomp
 puts "Would you like to enroll in the company’s health insurance? y/n"
 enroll = gets.chomp
 
-agetrue = 2016 - age == year
+agetrue = Time.new.year - age == year
 
 case 
-
 when agetrue && (garlic == "y" || enroll == "y")
 	puts "Probably not a vampire"
 when (!agetrue && garlic == "n" && enroll == "n")
 	puts "Almost certainly a vampire"
 when !agetrue && (garlic == "n" || enroll == "n")
 	puts "Probably a vampire"
-# NAME MATCH ISNT WORKING when name == "Drake Cula", "Tu Fang"
-# 	puts "Definitely a vampire"
+when (name =~ /Drake Cula/i) || (name =~ /Tu Fang/i)
 else
 	puts "Results inconclusive"
 end
