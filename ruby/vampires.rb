@@ -19,26 +19,24 @@ until employeesentered == entries  #employeesentered var increases by 1 until it
 	puts "Would you like to enroll in the company’s health insurance? y/n"
 	wantsinsurance = gets.chomp.downcase
 
-allergies = ""  #sets allergies var to avoid skipping this question after one entry answers "done"
+	allergies = ""  #sets allergies var to avoid skipping this question after one entry answers "done"
 	until allergies == "done"
 		puts "Type in your allergies one by one. Type 'done' when finished."
 		allergies = gets.chomp.downcase
 		if allergies == "sunshine"
 			break #exits allergies question and moves on to condition test
-		else  #in this case the empty else restarts the loop
 		end
 	end
-
 
 ageyearmatch = Time.new.year - age == year #calculates age accuracy and sets boolean for test
 decision = nil
 
-if  ageyearmatch && (likesgarlic == "y" || wantsinsurance == "y")
+if ageyearmatch && (likesgarlic == "y" || wantsinsurance == "y")
     decision = "Probably not a vampire"
 end
 
 if allergies == "sunshine" || !ageyearmatch && (likesgarlic == "n" || wantsinsurance == "n")
-	 decision = "Probably a vampire"
+	decision = "Probably a vampire"
 end
 
 if !ageyearmatch && likesgarlic == "n" && wantsinsurance == "n"
@@ -46,18 +44,16 @@ if !ageyearmatch && likesgarlic == "n" && wantsinsurance == "n"
 end
 
 if name == "drake cula" || name == "tu fang"
-    decision = "Definitely a vampire"
+	decision = "Definitely a vampire"
 end
 
 if decision.nil?
-   decision = "Results inconclusive"
+	decision = "Results inconclusive"
 end
 	
 puts decision
-
 employeesentered = employeesentered + 1
 end
-
 puts "Actually, never mind! What do these questions have to do with anything? Let's all be friends." 
 
 
