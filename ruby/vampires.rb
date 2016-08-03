@@ -29,21 +29,31 @@ allergies = ""  #sets allergies var to avoid skipping this question after one en
 		end
 	end
 
-vampforsure = name == "drake cula" || name == "tu fang"  #i'll exclude this condition in the first case tests
-ageyearmatch = Time.new.year - age == year #calculates age accuracy and sets boolean for test
 
-	puts case
-	when allergies != "sunshine" && !vampforsure && ageyearmatch && (likesgarlic == "y" || wantsinsurance == "y")
-		 "Probably not a vampire"
-	when allergies == "sunshine" || !vampforsure && !ageyearmatch && (likesgarlic == "n" || wantsinsurance == "n")
-		 "Probably a vampire"
-	when !vampforsure && (!ageyearmatch && likesgarlic == "n" && wantsinsurance == "n")
-		 "Almost certainly a vampire"
-	when vampforsure
-		 "Definitely a vampire"
-	else
-		 "Results inconclusive"
-	end
+ageyearmatch = Time.new.year - age == year #calculates age accuracy and sets boolean for test
+decision = nil
+
+if  ageyearmatch && (likesgarlic == "y" || wantsinsurance == "y")
+    decision = "Probably not a vampire"
+end
+
+if allergies == "sunshine" || !ageyearmatch && (likesgarlic == "n" || wantsinsurance == "n")
+	 decision = "Probably a vampire"
+end
+
+if !ageyearmatch && likesgarlic == "n" && wantsinsurance == "n"
+	decision = "Almost certainly a vampire"
+end
+
+if name == "drake cula" || name == "tu fang"
+    decision = "Definitely a vampire"
+end
+
+if decision.nil?
+   decision = "Results inconclusive"
+end
+	
+puts decision
 
 employeesentered = employeesentered + 1
 end
