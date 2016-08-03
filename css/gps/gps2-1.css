@@ -1,0 +1,41 @@
+body {
+background:  #ccffff;
+}
+
+html {
+font-family: helvetica;
+font-weight: lighter;
+}
+header {
+  background-image: url(http://www.medicalrecoveryservices.org/wp-content/uploads/banner-background1.jpg);
+  display: inline-block;
+  position: relative;
+  width: 95%;
+  border-bottom: 1px solid gray;
+  padding: 10px;
+}
+
+.column-1  {
+  display: inline-block;
+  position: relative;
+  width: 40%;
+  margin: 20px;
+  padding: 10px;
+}
+
+.column-2  {
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  width: 40%;
+  margin: 20px;
+  padding: 10px;
+}
+
+footer {
+  display: inline-block;
+  position: relative;
+  width: 95%;
+  margin: 20px;
+  padding: 10px;
+}
