@@ -1,5 +1,6 @@
 body {
-background:  #ccffff;
+background: #F8F8FF;
+
 }
 
 html {
@@ -30,12 +31,14 @@ header {
   width: 40%;
   margin: 20px;
   padding: 10px;
-}
+  }
 
 footer {
   display: inline-block;
+  text-align: center;
   position: relative;
   width: 95%;
   margin: 20px;
   padding: 10px;
+
 }
