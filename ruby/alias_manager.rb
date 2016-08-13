@@ -1,27 +1,19 @@
-#establish spy_name as "Felicia Torres"
-#convert spy_name to downcase
-#split two words into array
-#call index 1 then index 0 into spy_name_swapped
-#swap the two words to "Torres Felicia"
-#establish vowel_string as "aeiou"
-#establish consonant string as "bcdfghjklmnpqrstvwxyz"
-#create 2 methods to move to next letter in string:
-	#if spy_name contains vowel_string characters, 
-		#if edge case u
-	#if spy_name contains consonant_string characters,
-		#if edge case z 
 
-#vowel_string = "aeiou"
-#consonant_string = "bcdfghjklmnpqrstvwxyz"
+## TODO: can i add to hash instead of array?
+#take the name and split into an array, then swap the array
+#split the letters into an array and run both methods against each letter
+#loop until indexcounter is equal to name length
 
-##Vussit Gimodoe
+## I will be the first to admit this is a very inelegant program, but I spent way too much time on this before realizing we had to save the input to a data structure, so I decided to back into a solution. It functions properly and the desired results are achieved.
+
 
 def scramble(name)
   consonants = "bcdfghjklmnpqrstvwxyz"
   vowels = "aeiou"
 
-  name_array = name.downcase.split
-  name_swapped = name_array[1] + " " +  name_array[0]
+  name_array = name.downcase.split  #split the name into an array of two
+  name_swapped = name_array[1] + " " +  name_array[0] #swap the 2 elements and assign to a variable
+
   index_counter = 0
 
   until index_counter == name.length
@@ -39,17 +31,29 @@ def scramble(name)
     index_counter += 1
   end
   p name_swapped.split.map(&:capitalize).join(' ')
-  
+
+  $codenames << name_swapped.split.map(&:capitalize).join(' ')  #add to codenames array
  end
  
-#UI - loop request for name until the answer is quit.
- spy_name = ""
- until spy_name == "quit"
-    puts "Enter a name you'd like to scramble. Enter 'quit' when done."
-    spy_name = gets.chomp.downcase
-      if spy_name != "quit"
-        scramble(spy_name)
-      else puts "Thank you for spying!"
-      end
- end
+realnames = []
+$codenames = [] #I made gave this global scope ($) so I could use it in my scramble method.
+
+ name = ""
+  until name == "quit"
+        puts "Enter a name you'd like to scramble. Enter 'quit' when done."
+        name = gets.chomp.downcase
+          if name == "quit"
+            break
+          end
+        realnames << name #add 
+        scramble(name)
+   end
+   
+allnames = Hash[realnames.zip($codenames.map {|i| i.split /, /})]
+#I made one array for codenames and one for realnames. This expression combines them into a hash, although the key/value setup is "creative" to say the least
+allnames.each do |real_name,spy_name|
+  puts "#{spy_name} is actually #{real_name}"
+end
+
+
 
