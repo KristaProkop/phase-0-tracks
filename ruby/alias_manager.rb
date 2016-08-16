@@ -4,15 +4,15 @@
 #add conditions for edge cases, otherwise return the next letter in the string
 #add the names to hash
 
-
 def advance(string)
 
   vowels_str = 'aeioua'
   vowels_arr = vowels_str.split('')
   consonants_str = 'bcdfghjklmnpqrstvwxyzb'
   consonants_arr = consonants_str.split('')
- 
-  str1 = string.split('')
+  
+  string0 = string.downcase.split[1] + " " +  string.downcase.split[0]
+  str1 = string0.split('')
 
   str_new = str1.map do |char|
     if vowels_arr.include?(char)
@@ -42,7 +42,7 @@ end
         advance(name)
    end
  
-$codenames.each do |real_name,spy_name|
+$codenames.each do |spy_name,real_name|
   puts "#{spy_name}'s real name is #{real_name}."
 end
 
