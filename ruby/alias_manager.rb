@@ -46,7 +46,7 @@ $codenames = {} #I used global scope so I could call the hash inside and outside
         scramble(name)
    end
    
-$codenames.map do |real_name,spy_name|
+$codenames.each do |real_name,spy_name|
   puts "#{spy_name}'s real name is #{real_name}."
 end
 
