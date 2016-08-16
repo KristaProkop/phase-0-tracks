@@ -1,3 +1,10 @@
+#define vowels and consonants string variables
+#get user input for original name / if "quit" then exit
+#split the original name into array, swap positions and rejoin
+#add conditions for edge cases, otherwise return the next letter in the string
+#add the names to hash
+
+
 def advance(string)
 
   vowels_str = 'aeioua'
