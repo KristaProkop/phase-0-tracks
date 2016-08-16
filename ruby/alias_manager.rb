@@ -1,18 +1,17 @@
 #define vowels and consonants string variables
 #get user input for original name / if "quit" then exit
-#split the original name into array, swap their positions and rejoin
-#perform condition test for spaces and edge cases, otherwise return the next letter in the string
-#add the names to an array
+#split the original name into array, swap positions and rejoin
+#add conditions for edge cases, otherwise return the next letter in the string
+#add the names to hash
 
 def scramble(name)
   consonants = "bcdfghjklmnpqrstvwxyz"
   vowels = "aeiou"
 
-  name_split = name.downcase.split  
-  name_swapped = name_split[1] + " " +  name_split[0] #swap, add space back assign to new variable
+  #split the name into an array, swap the names using their index in the array
+  name_swapped = name.downcase.split[1] + " " +  name.downcase.split[0] #swap, add space back assign to new variable
 
   index_counter = 0
-  #time to select the next letters, with edge cases like space, z, and u accounted for:
   until index_counter == name.length
     if name_swapped[index_counter] == " "
         name_swapped[index_counter] == " "
@@ -27,16 +26,16 @@ def scramble(name)
     end
     index_counter += 1
   end
-  #print result after splitting the words, capitalizing the first letter, and re-joining them (just a fancy style choice!)
-  p name_swapped.split.map(&:capitalize).join(' ') 
-
-  #add original and scrambled names to array:
-  $codenames << [name.split.map(&:capitalize).join(' '), name_swapped.split.map(&:capitalize).join(' ')]  
+  
+  #print result and add to hash (first splitting the names, capitalizing the first letter, and re-joining them, at the same time assigning those results to variables to make the code a little more readable)
+  p spy_name = name_swapped.split.map(&:capitalize).join(' ') 
+  real_name = name.split.map(&:capitalize).join(' ')
+  $codenames[real_name] = spy_name  
+  
  end
  
-$codenames = [] #I gave this global scope ($) so I could use it both inside and outside the scramble method.
+$codenames = {} #I used global scope so I could call the hash inside and outside the scramble method - a necessity based on the way I originally structured my code.
 
-#user interface: request name and downcase it. Exit and do not scramble if user enters quit.
  name = ""
   until name == "quit"
         puts "Enter a name you'd like to scramble. Enter 'quit' when done."
@@ -50,7 +49,4 @@ $codenames = [] #I gave this global scope ($) so I could use it both inside and 
 $codenames.map do |real_name,spy_name|
   puts "#{spy_name}'s real name is #{real_name}."
 end
-
-
-
 
