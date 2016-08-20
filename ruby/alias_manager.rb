@@ -46,3 +46,23 @@ $codenames.each do |spy_name,real_name|
   puts "#{spy_name}'s real name is #{real_name}."
 end
 
+#HERE THERE IS A MUCH EASIER AND QUICKER WAY TO DO THIS! USING .TR METHOD
+
+# codenames = []
+# name = ""
+#   until name == "quit"
+#         puts "Enter a name to scramble. Enter 'quit' when done."
+#         name = gets.chomp.downcase
+#           if name == "quit"
+#             break
+#           end
+#       scrambledname = name.tr("abcdefghijklmnopqrstuvwxyza", "ecdfighjoklmnpuqrstvawxyze")
+      
+#       p scrambledname.split.map(&:capitalize).join(' ')
+#       codenames << [name, scrambledname]
+#    end
+   
+# codenames.each do |real_name, scrambled_name|
+#   puts "#{real_name}'s spy name is #{scrambled_name}."
+# end
+
