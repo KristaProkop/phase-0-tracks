@@ -23,16 +23,12 @@ class Candy
 	end
 
 	def eat
-		puts "Time to eat #{@name}!"
+		puts "This is only #{@calorie_percent}% of your daily calorie target - let's eat #{@name}!"
 	end
 
 	def healthy
-		calorie_percent = @calories.to_f/2000.0*100
-		if @calories < 100
-			puts "This is only #{calorie_percent}% of your daily target - let's eat!"
-		else
-			puts "This is #{calorie_percent}% of your daily target - you sure you want to eat that?"
-		end		
+		@calorie_percent = @calories.to_f/2000.0*100
+		@calories <= 100
 	end
 	
 	def melts
@@ -44,6 +40,9 @@ class Candy
 			return false
 		end
 	end
+	
+
+	
 
 end
 
@@ -60,22 +59,34 @@ end
 	#print eat method
 #else	#print melt method
 
-candy_data = []
 
 puts "CANDY DECISION-MAKER"
 puts "[[Pretend you have candy you want to eat]]"
+candy_data = []
 
-puts "What is the name of your candy?"
-name = gets.chomp
-
-puts "How many calories per serving?"
-calories = gets.chomp.to_i
-
-new_candy = Candy.new(name, calories)
-
-new_candy.melts
-		if new_candy.melts == true
-			puts "Oh no, your candy is melting :("
-		else
-			puts "Don't worry, this candy won't melt."
+while true
+	puts "What is the name of your candy?"
+	name = gets.chomp.downcase
+		if name == "quit"
+			break
 		end
+	puts "How many calories per serving?"
+	calories = gets.chomp.to_i
+	
+	new_candy = Candy.new(name, calories)
+	
+	candy_data << new_candy
+	
+			if new_candy.melts == true 
+				p "oops it melted!"
+			elsif new_candy.healthy == false	
+				p "This candy is terrible for you, are you sure you want to eat this?"
+			else
+				new_candy.eat
+			end
+end	
+p candy_data
+
+
+
+
