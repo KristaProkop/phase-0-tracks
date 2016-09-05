@@ -1,0 +1,35 @@
+Display the information in one table (either table is fine).
+select * from customers;
+
+Update an item that meets some condition (you can choose a condition that makes sense).
+update customers set name="Frank Jones" where name = "Bob Jones";
+update orders set filled="true" where id = 4;
+
+Display the information in both tables using one query.
+select * from orders, customers;
+
+Display a narrower selection of columns (fewer columns than all of them, in other words) from both tables using one query.
+#viewing customer name, order id, amount and filled status:
+select customers.name, orders.id, orders.amount, orders.filled from orders join customers on orders.customer_id = customers.id;
+
+Delete an item that meets some condition (you can choose a condition that makes sense).
+#cancel all orders made frank jones
+DELETE FROM orders where customer_id=1;
+
+#show customer name, order number, amount and status for only non-filled orders:
+select customers.name, orders.id, orders.amount, orders.filled from orders join customers on orders.customer_id = customers.id WHERE orders.filled="false";
+Shirley Temple|6|10.2|false
+Mary Crunches|8|68.44|false
+
+# inner join... show only customers name for every order
+select name from customers as C JOIN orders
+   ...> as R ON C.id=R.customer_id;
+Shirley Temple
+Max Power
+Shirley Temple
+Bob Bunches
+Mary Crunches
+
+
+
+
