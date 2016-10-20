@@ -1,0 +1,19 @@
+body {
+  max-width: 960px;
+}
+
+main {
+  display: inline-block;
+  text-align: center;
+}
+
+h1 {
+	font-family: helvetica;
+	font-size: 2em;
+	font-weight: lighter;
+}
+
+img {
+  width: 100%;
+}
+
