@@ -1,4 +1,6 @@
-# require gems
+#trying to push to github ---testing testing
+
+## require gems
 require 'sinatra'
 require 'sqlite3'
 
@@ -17,11 +19,32 @@ get '/students/new' do
   erb :new_student
 end
 
+get '/students/delete' do
+  erb :delete_student
+end
+
+# get '/students/campus_view' do
+#   erb :campus_view
+# end
+
+
 # create new students via
 # a form
 post '/students' do
   db.execute("INSERT INTO students (name, campus, age) VALUES (?,?,?)", [params['name'], params['campus'], params['age'].to_i])
   redirect '/'
 end
+
+# delete new student via a form
+post '/delete' do  
+  db.execute("INSERT INTO students (campus) VALUES (?)", params['campus'])
+end
+
+# #display students at a specific campus
+# post '/students' do
+#   db.execute("SELECT students (name, campus, age) VALUES (?,?,?)", [params['name'], params['campus'], params['age'].to_i])
+#   redirect '/'
+# end
+
 
 # add static resources
