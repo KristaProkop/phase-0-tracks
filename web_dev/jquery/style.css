@@ -1,7 +1,13 @@
 div {
     height:100px;
-    width:100px;
+    width:100%;
     display: inline-block;
+}
+
+#words {
+	font-size: 2em;
+	font-family: Helvetica;
+	text-align: center;
 }
 
 #pink {
