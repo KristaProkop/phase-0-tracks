@@ -1,0 +1,13 @@
+div {
+    height:100px;
+    width:100px;
+    display: inline-block;
+}
+
+#pink {
+    background-color:#FFC0CB;
+}
+
+#yellow {
+    background-color:#ffff00;
+}
