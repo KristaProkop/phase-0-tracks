@@ -15,12 +15,12 @@ function reverse(string) {
 reverse("not a palindrome")
 
 
-var some_boolean_test = true
-if (some_boolean_test) {
+var age = 5
+
+if (age == 2) {
     reverse("animal")
 }
 
-var other_boolean_test = false
-if (other_boolean_test) {
+if (age > 3) {
     reverse("mother")
 }
