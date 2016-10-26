@@ -26,17 +26,20 @@ client[:number_of_children] = gets.chomp.to_i
 puts "Client's decor theme:"
 client[:decor_theme] = gets.chomp.downcase
 
-puts "Does the client like shiplap?"
+puts "Does the client like shiplap? Enter y or n"
 client[:likes_shiplap] = to_boo(gets.chomp.downcase)
+#iterate to show summary of answers
+puts "******CLIENT SUMMARY******"
+client.each do |key, value|
+    puts "#{key}: #{value}"
+end
+puts "*****************"
 
-#show summary of answers. Ask if user needs to update any information;
+#Ask if user needs to update any information;
 #if the answer is not "none", get their answer and then
 #in-hash replace key_name with their answer
 #then convert variable data type as needed
-
-puts "Client summary: #{client}"
-p "If you need to update any of these answers, enter the key_name exactly as shown. 
-If all of the client data is accurate, enter none."
+p "If you need to update any of these answers, enter the key_name exactly as shown. If all of the client data is accurate, enter none."
 key_name = gets.chomp.downcase
 	if key_name != "none"
 			puts "Enter new value:"
@@ -44,4 +47,7 @@ key_name = gets.chomp.downcase
 			client[key_name.to_sym] = new_value
 	end
 
-p "Final client summary: #{client}"
+p "****FINAL CLIENT SUMMARY****"
+client.each do |key, value|
+    puts "#{key}: #{value}"
+end
